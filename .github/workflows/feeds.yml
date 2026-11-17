@@ -1,0 +1,39 @@
+name: RSS feeds
+
+# The RSS/Atom feeds from config/feeds.json: every 15 minutes it fetches them, builds feeds.json, feed/<id>.json and meta.json and
+# publishes to the "data" branch (GitHub Pages). Nothing is pushed when no feed has new items.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  feeds:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Last published data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: bash scripts/site-prepare.sh site data
+
+      - name: Fetch the feeds
+        run: python -m finactions feeds --config config/feeds.json --out site
+
+      - name: Publish
+        run: bash scripts/site-publish.sh site data "rss"
