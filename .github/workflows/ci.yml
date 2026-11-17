@@ -1,0 +1,36 @@
+name: CI
+
+# Code tests (no network) and basic script checks; publishes nothing.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Python tests
+        run: python -m unittest discover -s tests -v
+        env:
+          PYTHONPATH: src
+      - name: Script syntax
+        run: |
+          node --check scripts/scrape-etf.js
+          bash -n scripts/site-prepare.sh
+          bash -n scripts/site-publish.sh
+      - name: The feed catalog is valid
+        run: python -m finactions feeds --help >/dev/null && python -c "from finactions import feeds; print(len(feeds.load_catalog('config/feeds.json')), 'feeds')"
+        env:
+          PYTHONPATH: src
