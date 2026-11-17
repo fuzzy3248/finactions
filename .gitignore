@@ -1,0 +1,8 @@
+# local outputs and dependencies
+node_modules/
+out/
+site/
+__pycache__/
+*.pyc
+.venv/
+.playwright-mcp/
