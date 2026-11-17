@@ -1,0 +1,14 @@
+{
+  "name": "finactions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scraper of the Farside pages (flows into BTC and ETH ETFs) for the GitHub Actions workflows",
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "scrape": "node scripts/scrape-etf.js out"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

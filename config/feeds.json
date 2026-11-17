@@ -1,0 +1,112 @@
+[
+  {
+    "id": "bithub",
+    "name": "Bithub.pl",
+    "url": "https://bithub.pl/feed/"
+  },
+  {
+    "id": "beincrypto-pl",
+    "name": "BeInCrypto PL",
+    "url": "https://pl.beincrypto.com/feed/"
+  },
+  {
+    "id": "cryps",
+    "name": "Cryps.pl",
+    "url": "https://cryps.pl/feed/"
+  },
+  {
+    "id": "bitcoin-pl",
+    "name": "Bitcoin.pl",
+    "url": "https://bitcoin.pl/feed"
+  },
+  {
+    "id": "coindesk",
+    "name": "CoinDesk",
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "id": "cointelegraph",
+    "name": "Cointelegraph",
+    "url": "https://cointelegraph.com/rss"
+  },
+  {
+    "id": "decrypt",
+    "name": "Decrypt",
+    "url": "https://decrypt.co/feed"
+  },
+  {
+    "id": "bitcoin-magazine",
+    "name": "Bitcoin Magazine",
+    "url": "https://bitcoinmagazine.com/.rss/full/"
+  },
+  {
+    "id": "cryptoslate",
+    "name": "CryptoSlate",
+    "url": "https://cryptoslate.com/feed/"
+  },
+  {
+    "id": "the-block",
+    "name": "The Block",
+    "url": "https://www.theblock.co/rss.xml"
+  },
+  {
+    "id": "cryptopotato",
+    "name": "CryptoPotato",
+    "url": "https://cryptopotato.com/feed/"
+  },
+  {
+    "id": "u-today",
+    "name": "U.Today",
+    "url": "https://u.today/rss"
+  },
+  {
+    "id": "bitcoinist",
+    "name": "Bitcoinist",
+    "url": "https://bitcoinist.com/feed/"
+  },
+  {
+    "id": "newsbtc",
+    "name": "NewsBTC",
+    "url": "https://www.newsbtc.com/feed/"
+  },
+  {
+    "id": "crypto-briefing",
+    "name": "Crypto Briefing",
+    "url": "https://cryptobriefing.com/feed/"
+  },
+  {
+    "id": "beincrypto",
+    "name": "BeInCrypto",
+    "url": "https://beincrypto.com/feed/"
+  },
+  {
+    "id": "cryptonews",
+    "name": "Cryptonews",
+    "url": "https://cryptonews.com/news/feed/"
+  },
+  {
+    "id": "the-defiant",
+    "name": "The Defiant",
+    "url": "https://thedefiant.io/feed"
+  },
+  {
+    "id": "bitcoin-com",
+    "name": "Bitcoin.com News",
+    "url": "https://news.bitcoin.com/feed/"
+  },
+  {
+    "id": "daily-hodl",
+    "name": "The Daily Hodl",
+    "url": "https://dailyhodl.com/feed/"
+  },
+  {
+    "id": "coingape",
+    "name": "CoinGape",
+    "url": "https://coingape.com/feed/"
+  },
+  {
+    "id": "crypto-news",
+    "name": "Crypto.news",
+    "url": "https://crypto.news/feed/"
+  }
+]
